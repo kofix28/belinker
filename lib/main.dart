@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'auth_gate.dart';
+import 'Top_Bar.dart';
+import 'bottom_bar.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(); // يقرأ google-services.json تلقائياً على أندرويد
-  runApp(const App());
-}
+void main() => runApp(const MyApp());
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
-      home: const AuthGate(), // لو داخل → HomePage، لو لا → LoginScreen
+      title: 'BeLinker',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(), // هنا تبدأ بالصفحة الرئيسية
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: const Top_Bar(),
+      body: const Center(
+        child: Text("محتوى الصفحة الرئيسية"),
+      ),
+      bottomNavigationBar:  BottomBar(),
     );
   }
 }
