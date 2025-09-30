@@ -18,11 +18,11 @@ class CustomSliverTabBar extends StatelessWidget {
           controller: controller,
           isScrollable: true,
           labelPadding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.1, // 🔥 مسافة أفقية بين التابات
+            horizontal: MediaQuery.of(context).size.width * 0.07,
           ),
           indicator: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
+            color: Colors.grey.shade50,
+            borderRadius: BorderRadius.circular(25),
           ),
           indicatorSize: TabBarIndicatorSize.tab,
           indicatorPadding: EdgeInsets.symmetric(
@@ -30,9 +30,10 @@ class CustomSliverTabBar extends StatelessWidget {
             vertical: screenHeight * 0.005,
           ),
 
-          labelColor: Colors.blueAccent,
-          unselectedLabelColor: Colors.white,
+          labelColor: Color(0xFF0057D9),
+          unselectedLabelColor: Color(0xFFFF6600),
           tabAlignment: TabAlignment.center,
+          dividerColor:Colors.transparent,
           tabs: const [
             Tab(icon: Icon(Icons.request_page), text: "request"),
             Tab(icon: Icon(Icons.home_repair_service), text: "service"),
@@ -60,7 +61,7 @@ class _TabBarDelegate extends SliverPersistentHeaderDelegate {
       ),
       padding: EdgeInsets.all(screenWidth * 0.01),
       decoration: BoxDecoration(
-        color: Colors.blueAccent,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(screenWidth * 0.04),
         boxShadow: [
           BoxShadow(
