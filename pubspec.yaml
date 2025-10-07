@@ -39,6 +39,13 @@ dependencies:
   firebase_auth: ^6.0.2
   cloud_firestore: ^6.0.1
   google_sign_in: ^7.1.1
+  curved_navigation_bar: ^1.0.6
+  standard_searchbar: ^2.1.1
+  awesome_dialog: ^3.1.0
+  map_location_picker: ^2.0.3
+  image_picker: ^1.1.1
+  rive: ^0.11.17
+
 
 dev_dependencies:
   flutter_test:
@@ -58,7 +65,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/belinke_name.png
+    - assets/logo.png
+    - assets/bottom1.png
+    - assets/bottom2.png
+    - assets/top1.png
+    - assets/top2.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
